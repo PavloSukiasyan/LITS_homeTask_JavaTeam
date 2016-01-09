@@ -1,0 +1,22 @@
+[
+{
+		"last_name" : "Sukiasyan",
+		"course" : "Automation",
+		"age" : "27"
+	},
+	{
+		"last_name" : "Duda",
+		"course" : "Automation",
+		"age" : "25"
+	},
+	{
+		"last_name" : "Hostynetska",
+		"course" : "Automation",
+		"age" : "24"
+	},
+	{
+		"last_name" : "Yaremshuk",
+		"course" : "History",
+		"age" : "27"
+	}
+]
