@@ -45,6 +45,21 @@ public class StudentsTestDrive {
 		System.out.print(studentsList.get(3).getCourse() + ", ");
 		System.out.println(studentsList.get(3).getAge());
 
+		System.out.println();
+		System.out.println("Sorted students:");
+		
+		StudentsSort studentsSort = new StudentsSort();
+		studentsSort.setStudents(studentsList);
+		studentsSort.sort();
+		
+		List<StudentsJsonDTO> sortedStudents = studentsSort.getSortedStudents();
+		
+		for (StudentsJsonDTO student : sortedStudents) {
+			System.out.print(student.getLast_name() + ", ");
+			System.out.print(student.getCourse() + ", ");
+			System.out.println(student.getAge());	
+		}
+		
 	}
 
 }
