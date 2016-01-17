@@ -15,6 +15,16 @@
 		"age" : "24"
 	},
 	{
+		"last_name" : "Hostynetska",
+		"course" : "Biology",
+		"age" : "28"
+	},
+	{
+		"last_name" : "Hostynetska",
+		"course" : "History",
+		"age" : "16"
+	},
+	{
 		"last_name" : "Yaremshuk",
 		"course" : "History",
 		"age" : "27"

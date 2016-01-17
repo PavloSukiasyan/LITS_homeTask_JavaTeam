@@ -45,6 +45,14 @@ public class StudentsTestDrive {
 		System.out.print(studentsList.get(3).getCourse() + ", ");
 		System.out.println(studentsList.get(3).getAge());
 
+		System.out.print(studentsList.get(4).getLast_name() + ", ");
+		System.out.print(studentsList.get(4).getCourse() + ", ");
+		System.out.println(studentsList.get(4).getAge());
+		
+		System.out.print(studentsList.get(5).getLast_name() + ", ");
+		System.out.print(studentsList.get(5).getCourse() + ", ");
+		System.out.println(studentsList.get(5).getAge());
+		
 		System.out.println();
 		System.out.println("Sorted students:");
 		
