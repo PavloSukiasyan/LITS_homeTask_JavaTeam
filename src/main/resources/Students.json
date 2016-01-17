@@ -11,8 +11,23 @@
 	},
 	{
 		"last_name" : "Hostynetska",
-		"course" : "Automation",
+		"course" : "History",
 		"age" : "24"
+	},
+	{
+		"last_name" : "Hostynetska",
+		"course" : "History",
+		"age" : "20"
+	},
+	{
+		"last_name" : "Hostynetska",
+		"course" : "Biology",
+		"age" : "28"
+	},
+	{
+		"last_name" : "Hostynetska",
+		"course" : "Automation",
+		"age" : "16"
 	},
 	{
 		"last_name" : "Yaremshuk",
