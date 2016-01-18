@@ -1,4 +1,5 @@
 package JavaTeamProject;
+
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -7,16 +8,15 @@ public class StudentsJsonDTO {
 	private String last_name;
 	private String course;
 	private int age;
-	
+
 	@JsonCreator
-	public StudentsJsonDTO (@JsonProperty("last_name") String last_name,
-			@JsonProperty("course") String course,
+	public StudentsJsonDTO(@JsonProperty("last_name") String last_name, @JsonProperty("course") String course,
 			@JsonProperty("age") int age) {
 		this.last_name = last_name;
 		this.course = course;
 		this.age = age;
 	}
-	
+
 	public String getLast_name() {
 		return last_name;
 	}
@@ -40,5 +40,5 @@ public class StudentsJsonDTO {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	
+
 }

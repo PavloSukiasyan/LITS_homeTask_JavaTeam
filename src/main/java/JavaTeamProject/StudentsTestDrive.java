@@ -5,6 +5,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import com.fasterxml.jackson.core.JsonParseException;
@@ -14,11 +16,11 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.TypeFactory;
 
 public class StudentsTestDrive {
-	
+
 	/*
-	* D:\WorkspaceEclipse\LITS_homeTask_JavaTeam>
-	* mvn exec:java -Dexec.mainClass="JavaTeamProject.StudentsTestDrive"
-	*/
+	 * D:\WorkspaceEclipse\LITS_homeTask_JavaTeam> mvn exec:java
+	 * -Dexec.mainClass="JavaTeamProject.StudentsTestDrive"
+	 */
 	public static void main(String[] args)
 			throws JsonParseException, JsonMappingException, IOException, FileNotFoundException {
 		InputStream input = new FileInputStream("src/main/resources/Students.json");
@@ -29,22 +31,32 @@ public class StudentsTestDrive {
 		List<StudentsJsonDTO> studentsList = objectMapper.readValue(input,
 				typeFactory.constructCollectionType(ArrayList.class, StudentsJsonDTO.class));
 
-		System.out.print(studentsList.get(0).getLast_name() + ", ");
-		System.out.print(studentsList.get(0).getCourse() + ", ");
-		System.out.println(studentsList.get(0).getAge());
+		for (int i = 0; i < studentsList.size(); i++) {
+			System.out.print(studentsList.get(i).getLast_name() + ", ");
+			System.out.print(studentsList.get(i).getCourse() + ", ");
+			System.out.println(studentsList.get(i).getAge());
+		}
+		Comparator<StudentsJsonDTO> com1 = new Comparator<StudentsJsonDTO>() {
 
-		System.out.print(studentsList.get(1).getLast_name() + ", ");
-		System.out.print(studentsList.get(1).getCourse() + ", ");
-		System.out.println(studentsList.get(1).getAge());
+			public int compare(StudentsJsonDTO o1, StudentsJsonDTO o2) {
+				int c;
+				c = o1.getLast_name().compareTo(o2.getLast_name());
+				if (c == 0) {
+					c = o1.getCourse().compareTo(o2.getCourse()); // compareToIgnoreCase
+				}
+				if (c == 0) {
+					c = o1.getAge() - o2.getAge();
+				}
+				return c;
+			}
+		};
+		Collections.sort(studentsList, com1);
+		System.out.println("\n" + "After sorting" + "\n");
 
-		System.out.print(studentsList.get(2).getLast_name() + ", ");
-		System.out.print(studentsList.get(2).getCourse() + ", ");
-		System.out.println(studentsList.get(2).getAge());
-
-		System.out.print(studentsList.get(3).getLast_name() + ", ");
-		System.out.print(studentsList.get(3).getCourse() + ", ");
-		System.out.println(studentsList.get(3).getAge());
-
+		for (int i = 0; i < studentsList.size(); i++) {
+			System.out.print(studentsList.get(i).getLast_name() + ", ");
+			System.out.print(studentsList.get(i).getCourse() + ", ");
+			System.out.println(studentsList.get(i).getAge());
+		}
 	}
-
 }

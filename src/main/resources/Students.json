@@ -18,5 +18,40 @@
 		"last_name" : "Yaremshuk",
 		"course" : "History",
 		"age" : "27"
-	}
+	},
+	{
+		"last_name" : "Sukiasyan",
+		"course" : "Automation",
+		"age" : "28"
+	},
+	{
+		"last_name" : "Aaa",
+		"course" : "aHistory",
+		"age" : "17"
+	},
+	{
+		"last_name" : "Aaa",
+		"course" : "aHistory",
+		"age" : "27"
+	},
+	{
+		"last_name" : "Aaa",
+		"course" : "bHistory",
+		"age" : "27"
+	},
+	{
+		"last_name" : "aaa",
+		"course" : "bHistory",
+		"age" : "900"
+	},
+		{
+		"last_name" : "aaa",
+		"course" : "bHistory",
+		"age" : "1"
+	},
+		{
+		"last_name" : "aaa",
+		"course" : "bHistory",
+		"age" : "-91"
+	}	
 ]
