@@ -9,12 +9,9 @@ public class StudentsSort {
 	
 	private List<StudentsJsonDTO> students;
 	
-	public StudentsSort() {
+	public StudentsSort(Collection <StudentsJsonDTO> studentsCollection) {
 		students = new ArrayList<StudentsJsonDTO> ();
-	}
-	
-	public void setStudents(Collection <StudentsJsonDTO> students) {
-		this.students.addAll(students);
+		students.addAll(studentsCollection);
 	}
 	
 	public void sort() {
